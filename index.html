@@ -57,7 +57,7 @@ GitHub
 </a>
 
 <a class="btn outline"
-href="https://linkedin.com/in/joanazike"
+href="https://www.linkedin.com/in/joan-azike/"
 target="_blank">
 LinkedIn
 </a>
@@ -262,20 +262,26 @@ Live Demo
 
 
 <script>
+  // Scroll progress bar
+  window.onscroll = function() {
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    document.getElementById("progress-bar").style.width = scrolled + "%";
+  };
 
-window.onscroll=function(){
+  // Mobile-friendly flip card functionality
+const flipCards = document.querySelectorAll('.flip-card');
 
-let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
-
-let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
-
-let scrolled=(winScroll/height)*100;
-
-document.getElementById("progress-bar").style.width=scrolled+"%";
-
-};
-
+flipCards.forEach(card => {
+  card.addEventListener('click', (e) => {
+    // Only toggle if the click is NOT on a link inside the card
+    if(!e.target.closest('a')) {
+      const inner = card.querySelector('.flip-card-inner');
+      inner.classList.toggle('flipped');
+    }
+  });
+});
 </script>
-
 </body>
 </html>
