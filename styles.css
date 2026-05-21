@@ -9,10 +9,11 @@ scroll-behavior:smooth;
 body{
 background:#f4f6f8;
 color:#1e293b;
+line-height:1.6;
+overflow-x:hidden;
 }
 
-
-/* progress bar */
+/* PROGRESS BAR */
 
 #progress-bar{
 position:fixed;
@@ -20,12 +21,11 @@ top:0;
 left:0;
 height:4px;
 width:0%;
-background: #2563eb;
+background:#2563eb;
 z-index:1000;
 }
 
-
-/* navbar */
+/* NAVBAR */
 
 .navbar{
 display:flex;
@@ -33,6 +33,8 @@ justify-content:space-between;
 align-items:center;
 padding:20px 8%;
 background:#020617;
+flex-wrap:wrap;
+gap:20px;
 }
 
 .logo{
@@ -52,6 +54,8 @@ box-shadow:0 6px 15px rgba(0,0,0,0.2);
 display:flex;
 list-style:none;
 gap:35px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .nav-links a{
@@ -61,8 +65,7 @@ position:relative;
 padding-bottom:6px;
 }
 
-
-/* animated underline */
+/* NAV ANIMATION */
 
 .nav-links a::after{
 content:"";
@@ -80,47 +83,46 @@ transform:translateX(-50%);
 width:100%;
 }
 
-
-
-/* hero */
+/* HERO */
 
 .hero{
-height:90vh;
+min-height:90vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background-image: url(hero_background_image.PNG);
+padding:40px 5%;
+background-image:url(hero_background_image.PNG);
+background-size:cover;
+background-position:center;
 }
 
 .hero-card{
-
 background:white;
-
-border: 2px solid #0f172a;
-
+border:2px solid #0f172a;
 padding:60px;
-
 border-radius:20px;
-
 text-align:center;
-
 box-shadow:0 25px 50px rgba(0,0,0,0.25);
+max-width:700px;
+width:100%;
+}
 
+.hero h1{
+font-size:2.5rem;
 }
 
 .tagline{
-margin:10px 0 25px;
+margin:12px 0 28px;
 color:#475569;
 }
 
-
-
-/* buttons */
+/* BUTTONS */
 
 .hero-buttons{
 display:flex;
 gap:20px;
 justify-content:center;
+flex-wrap:wrap;
 }
 
 .btn{
@@ -147,21 +149,22 @@ transform:translateY(-4px);
 box-shadow:0 15px 30px rgba(37,99,235,0.4);
 }
 
-
-
-/* sections */
+/* SECTIONS */
 
 .section{
 padding:80px 10%;
+}
+
+.section h2{
+margin-bottom:20px;
+font-size:2rem;
 }
 
 .light-section{
 background:white;
 }
 
-
-
-/* skills */
+/* SKILLS */
 
 .skills-container{
 display:grid;
@@ -171,356 +174,207 @@ margin-top:40px;
 }
 
 .skill{
-
-height:80px;
-
+min-height:80px;
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 background:white;
-
 border-radius:14px;
-
 border:2px solid #2563eb;
-
 font-weight:600;
-
 box-shadow:0 8px 20px rgba(0,0,0,0.1);
-
 transition:0.3s;
-
-text-align: center;
-
+text-align:center;
+padding:15px;
 }
 
-.skill:hover{
-
+.skill:hover,
+.skill:active{
 background:#2563eb;
-
 color:white;
-
 transform:translateY(-8px);
-
 box-shadow:
 0 20px 40px rgba(0,0,0,0.2),
 0 0 12px rgba(37,99,235,0.6);
-
 }
 
-/* Mobile tap (touch) */
-.skill:active {
-    background:#2563eb;
-    color:white;
-    transform:translateY(-8px);
-    box-shadow:
-      0 20px 40px rgba(0,0,0,0.2),
-      0 0 12px rgba(37,99,235,0.6);
-}
-
-
-
-/* projects */
+/* PROJECTS */
 
 .projects-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
 margin-top:40px;
 }
 
-.project-card{
-
-background:#0f172a;
-
-border-radius:18px;
-
-overflow:hidden;
-
-color:white;
-
-position:relative;
-
-transition:0.4s;
-
-box-shadow:0 15px 30px rgba(0,0,0,0.25);
-
-}
-
-
-/* image preview */
-
-.project-image{
-
-width:100%;
-
-height:180px;
-
-object-fit:cover;
-
-opacity:0.9;
-
-transition:0.4s;
-
-}
-
-.project-card:hover .project-image{
-
-opacity:1;
-
-transform:scale(1.05);
-
-}
-
-
-/* glow border */
-
-.project-card::before{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-border-radius:18px;
-
-padding:2px;
-
-background:linear-gradient(45deg,#38bdf8,#2563eb,#38bdf8);
-
--webkit-mask:
-linear-gradient(#fff 0 0) content-box,
-linear-gradient(#fff 0 0);
-
--webkit-mask-composite:xor;
-
-mask-composite:exclude;
-
-opacity:0;
-
-transition:0.4s;
-
-}
-
-.project-card:hover::before{
-opacity:1;
-}
-
-.project-content{
-padding:25px;
-}
-
-.project-links{
-margin-top:15px;
-display:flex;
-gap:20px;
-}
-
-.project-links a{
-    display: inline-block;
-    padding: 10px 18px;
-    margin: 5px 0;
-    border-radius: 8px;
-    background: #0f172a; /* dark base to match card back */
-    color: white;
-    font-weight: 700;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 12px rgba(37,99,235,0.3);
-}
-
-/* Glow border effect using a pseudo-element */
-.project-links a::before{
-    content:"";
-    position:absolute;
-    top:0; left:0; right:0; bottom:0;
-    border-radius:8px;
-    padding:2px;
-    z-index:-1;
-    filter: blur(8px);
-    opacity:0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover effect: glow and lift */
-.project-links a:hover::before{
-    opacity:1;
-    transform: scale(1.05); /* slight enlargement for dynamic effect */
-}
-
-.project-links a:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(37,99,235,0.6), 0 0 10px rgba(56,189,248,0.7);
-    text-shadow: 0 0 5px rgba(255,255,255,0.6);
-}
-
-/* FLIP CARD CONTAINER */
+/* FLIP CARD */
 
 .flip-card{
-
-background:transparent;
-
-height:280px;
-
-perspective:1000px;
-
+height:460px;
+perspective:1200px;
 }
-
-
-/* INNER CARD */
 
 .flip-card-inner{
-
 position:relative;
-
 width:100%;
-
 height:100%;
-
-transition:transform 0.7s;
-
+transition:transform 0.8s;
 transform-style:preserve-3d;
-
 }
-
-
-/* FLIP ON HOVER */
 
 .flip-card:hover .flip-card-inner{
-
 transform:rotateY(180deg);
-
 }
 
+.flip-card-inner.flipped{
+transform:rotateY(180deg);
+}
 
-/* FRONT AND BACK */
+/* FRONT & BACK */
 
 .flip-card-front,
 .flip-card-back{
-
 position:absolute;
-
 width:100%;
-
 height:100%;
-
 backface-visibility:hidden;
-
-border-radius:18px;
-
-padding:25px;
-
+border-radius:20px;
+padding:28px;
 display:flex;
-
 flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
+justify-content:space-between;
 text-align:center;
-
+overflow:hidden;
 }
 
-
-/* FRONT STYLE */
+/* FRONT */
 
 .flip-card-front{
-
 background:#0f172a;
-
 color:white;
-
-box-shadow:0 15px 30px rgba(0,0,0,0.25);
-
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
 }
 
+/* THIS MAKES ALL CARDS UNIFORM */
 
-/* BACK STYLE */
-
-.flip-card-back{
-
-background:white;
-
-color:#020617;
-
-transform:rotateY(180deg);
-
-box-shadow:0 15px 30px rgba(0,0,0,0.15);
-
+.front-content{
+flex:1;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
 }
+
+.front-bottom{
+margin-top:auto;
+}
+
+/* TITLE */
+
+.flip-card-front h3{
+font-size:1.4rem;
+margin-bottom:15px;
+}
+
+/* DESCRIPTION */
+
 .project-desc{
-
 font-size:14px;
-
-margin:12px 0;
-
-color:#cbd5f5;
-
-line-height:1.4;
-
+color:#cbd5e1;
+line-height:1.7;
 }
+
+/* TECH TAGS */
 
 .tech-preview{
-
 display:flex;
-
-gap:8px;
-
-margin-top:10px;
-
+gap:10px;
+margin-top:20px;
 flex-wrap:wrap;
-
 justify-content:center;
-
 }
 
 .tech-preview span{
-
 background:#1e293b;
-
-padding:5px 10px;
-
+padding:6px 12px;
 border-radius:6px;
-
 font-size:12px;
-
 }
+
+/* HOVER / TAP TEXT */
 
 .hover-tip{
-
-margin-top:15px;
-
-font-size:12px;
-
-opacity:0.7;
-
+margin-top:18px;
+font-size:13px;
+opacity:0.75;
 }
 
+.mobile-tip{
+display:none;
+}
+
+/* BACK */
+
+.flip-card-back{
+background:white;
+color:#020617;
+transform:rotateY(180deg);
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
 
 /* IMAGE */
 
 .flip-card-back img{
-
 width:100%;
-
-height:150px;
-
+height:220px;
 object-fit:contain;
-
-border-radius:10px;
-
-margin-bottom:15px;
-
+border-radius:14px;
+margin-bottom:18px;
+display:block;
 }
 
-/* footer */
+/* TECH STACK */
+
+.flip-card-back h4{
+margin-bottom:10px;
+}
+
+/* LINKS */
+
+.project-links{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.project-links a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:10px 18px;
+border-radius:10px;
+background:#0f172a;
+color:white;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+box-shadow:0 6px 12px rgba(37,99,235,0.3);
+}
+
+.project-links a:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 20px rgba(37,99,235,0.5);
+}
+
+/* CERTIFICATIONS */
+
+.cert-list{
+padding-left:20px;
+line-height:2;
+}
+
+/* FOOTER */
 
 .footer{
 background:#020617;
@@ -530,112 +384,135 @@ padding:25px;
 margin-top:60px;
 }
 
-/* ===== MOBILE RESPONSIVE ===== */
+/* RESPONSIVE DESIGN */
 
-/* General padding adjustments on small screens */
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 15px 5%;
-    }
-    .nav-links {
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+/* TABLETS */
 
-    .hero-card {
-        padding: 30px 20px;
-    }
+@media screen and (max-width:768px){
 
-    .hero-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .section {
-        padding: 60px 5%;
-    }
-
-    .skills-container {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 15px;
-    }
-
-    .project-card, .flip-card {
-        height: auto;
-    }
-
-    .flip-card {
-        height: 320px; /* allow more height for smaller devices */
-    }
-
-    .flip-card-back img {
-        height: 120px;
-    }
-
-    .project-links {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .tech-preview {
-        gap: 5px;
-    }
-
-    .hero h1 {
-        font-size: 1.6rem;
-    }
-
-    .tagline {
-        font-size: 0.9rem;
-    }
+.navbar{
+flex-direction:column;
+padding:18px 5%;
 }
 
-/* Extra small screens (phones) */
-@media screen and (max-width: 480px) {
-    .flip-card {
-        height: 360px;
-    }
-
-    .flip-card-back img {
-        height: 100px;
-    }
-
-    .project-links a {
-        padding: 8px 14px;
-        font-size: 14px;
-    }
-
-    .skills-container {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-
-    .hero h1 {
-        font-size: 1.4rem;
-        margin-bottom: 10px;
-    }
-
-    .tagline {
-        font-size: 0.85rem;
-    }
+.nav-links{
+gap:20px;
 }
 
-/* Ensure images are responsive */
-img {
-    max-width: 100%;
-    height: auto;
+.section{
+padding:70px 6%;
 }
 
-/* Flip cards scale down nicely */
-.flip-card-inner {
-    transform-style: preserve-3d;
-    width: 100%;
-    height: 100%;
+.hero-card{
+padding:40px 25px;
 }
 
-/* Enable flipping on tap/click for mobile */
-.flip-card-inner.flipped {
-  transform: rotateY(180deg);
+.hero h1{
+font-size:2rem;
+}
+
+.hero-buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.projects-grid{
+grid-template-columns:1fr;
+}
+
+.flip-card{
+height:500px;
+}
+
+.flip-card-back img{
+height:260px;
+}
+
+/* CHANGE HOVER TEXT TO TAP */
+
+.desktop-tip{
+display:none;
+}
+
+.mobile-tip{
+display:inline;
+}
+
+}
+
+/* PHONES */
+
+@media screen and (max-width:480px){
+
+.hero{
+padding:30px 5%;
+}
+
+.hero-card{
+padding:35px 20px;
+}
+
+.hero h1{
+font-size:1.6rem;
+}
+
+.tagline{
+font-size:0.9rem;
+}
+
+.section h2{
+font-size:1.7rem;
+}
+
+.skills-container{
+grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+gap:15px;
+}
+
+.flip-card{
+height:540px;
+}
+
+.flip-card-front,
+.flip-card-back{
+padding:22px;
+}
+
+.flip-card-back img{
+height:280px;
+}
+
+.project-links{
+flex-direction:column;
+align-items:center;
+}
+
+.project-links a{
+width:100%;
+max-width:220px;
+}
+
+.project-desc{
+font-size:13px;
+}
+
+}
+
+/* VERY SMALL PHONES */
+
+@media screen and (max-width:360px){
+
+.flip-card{
+height:580px;
+}
+
+.flip-card-back img{
+height:240px;
+}
+
+.nav-links{
+gap:14px;
+font-size:14px;
+}
+
 }

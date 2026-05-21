@@ -10,33 +10,32 @@
 
 <link rel="stylesheet" href="styles.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
-
 <body>
 
+<!-- PROGRESS BAR -->
 
 <div id="progress-bar"></div>
 
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
 <div class="logo">JA</div>
 
 <ul class="nav-links">
-
 <li><a href="#profile">Profile</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#certifications">Certifications</a></li>
-
 </ul>
 
 </nav>
 
-
+<!-- HERO SECTION -->
 
 <section class="hero">
 
@@ -68,21 +67,21 @@ LinkedIn
 
 </section>
 
-
+<!-- PROFILE -->
 
 <section class="section light-section" id="profile">
 
 <h2>Personal Profile</h2>
 
 <p>
-Proactive Software Engineering undergraduate student and growing Front-End Developer commited to building clean and responsive user-centered web interfaces. Focused on creating practical front-end applications and improving problem-solving skills through project-based learning and continuous development.
+Proactive Software Engineering undergraduate student and growing Front-End Developer committed to building clean and responsive user-centered web interfaces. Focused on creating practical front-end applications and improving problem-solving skills through project-based learning and continuous development.
 Currently building strong technical skills in HTML, CSS, and JavaScript, while exploring Python for backend development to strengthen my full-stack foundation.
 Driven by curiosity, creativity, and a commitment to climate action, I aim to contribute to innovative digital solutions that integrate technology, sustainability, and social impact.
 </p>
 
 </section>
 
-
+<!-- SKILLS -->
 
 <section class="section" id="skills">
 
@@ -94,16 +93,19 @@ Driven by curiosity, creativity, and a commitment to climate action, I aim to co
 <div class="skill">CSS</div>
 <div class="skill">JavaScript</div>
 <div class="skill">Python</div>
-<div class="skill">Responsive Design</div>
-<div class="skill">DOM Manipulation</div>
+<div class="skill">Responsive UI Design</div>
 <div class="skill">Git & GitHub</div>
 <div class="skill">VS Code</div>
+<div class="skill">Microsoft Word</div>
+<div class="skill">PowerPoint</div>
+<div class="skill">Canva</div>
+<div class="skill">Google Workspace</div>
 
 </div>
 
 </section>
 
-
+<!-- PROJECTS -->
 
 <section class="section light-section" id="projects">
 
@@ -121,13 +123,17 @@ Driven by curiosity, creativity, and a commitment to climate action, I aim to co
 
 <div class="flip-card-front">
 
-<h3>Basketball Scoreboard</h3>
+<div class="front-content">
+
+<h3>Orbit</h3>
 
 <p class="project-desc">
-A digital basketball scoreboard that updates scores in real time.
-Users can add points to each team and reset the game.
-The interface was designed to resemble a real scoreboard display.
+Undertook the front-end development of a centralized campus event announcement web application where organizers can create and post events to a live feed which students can view, save, and set Google Calendar reminders for events of interest.
 </p>
+
+</div>
+
+<div class="front-bottom">
 
 <div class="tech-preview">
 <span>HTML</span>
@@ -135,10 +141,79 @@ The interface was designed to resemble a real scoreboard display.
 <span>JavaScript</span>
 </div>
 
-<p class="hover-tip">Hover to view project preview →</p>
+<p class="hover-tip">
+<span class="desktop-tip">Hover to view project preview →</span>
+<span class="mobile-tip">Tap to view project preview →</span>
+</p>
 
 </div>
 
+</div>
+
+<!-- BACK -->
+
+<div class="flip-card-back">
+
+<img src="orbit screenshot.png" alt="Orbit project">
+
+<h4>Tech Stack</h4>
+
+<p>HTML • CSS • JavaScript</p>
+
+<div class="project-links">
+
+<a href="https://github.com/divinepraise86/Nile-Event-Management-System" target="_blank">
+GitHub
+</a>
+
+<a href="https://orbit-event-hub.web.app/index.html" target="_blank">
+Live Demo
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PROJECT 2 -->
+
+<div class="flip-card">
+
+<div class="flip-card-inner">
+
+<!-- FRONT -->
+
+<div class="flip-card-front">
+
+<div class="front-content">
+
+<h3>Basketball Scoreboard</h3>
+
+<p class="project-desc">
+A digital basketball scoreboard that updates scores in real time. Users can add points to each team and reset the game. The interface was designed to resemble a real scoreboard display.
+</p>
+
+</div>
+
+<div class="front-bottom">
+
+<div class="tech-preview">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+</div>
+
+<p class="hover-tip">
+<span class="desktop-tip">Hover to view project preview →</span>
+<span class="mobile-tip">Tap to view project preview →</span>
+</p>
+
+</div>
+
+</div>
 
 <!-- BACK -->
 
@@ -152,11 +227,11 @@ The interface was designed to resemble a real scoreboard display.
 
 <div class="project-links">
 
-<a href="https://github.com/joanginika14-web/Basketball-Scoreboard">
+<a href="https://github.com/joanginika14-web/Basketball-Scoreboard" target="_blank">
 GitHub
 </a>
 
-<a href="https://basketball-scoreboard-web-app.netlify.app/">
+<a href="https://basketball-scoreboard-web-app.netlify.app/" target="_blank">
 Live Demo
 </a>
 
@@ -168,8 +243,7 @@ Live Demo
 
 </div>
 
-
-<!-- PROJECT 2 -->
+<!-- PROJECT 3 -->
 
 <div class="flip-card">
 
@@ -179,13 +253,17 @@ Live Demo
 
 <div class="flip-card-front">
 
+<div class="front-content">
+
 <h3>Bakery Cupcake Counter</h3>
 
 <p class="project-desc">
-An interactive cupcake sales tracker that counts cupcakes sold per shift
-through button clicks, saves this value and displays previous saved entries.
-Built to practice JavaScript logic and dynamic UI updates.
+An interactive cupcake sales tracker that counts cupcakes sold per shift through button clicks, saves this value and displays previous saved entries. Built to practice JavaScript logic and dynamic UI updates.
 </p>
+
+</div>
+
+<div class="front-bottom">
 
 <div class="tech-preview">
 <span>HTML</span>
@@ -193,10 +271,14 @@ Built to practice JavaScript logic and dynamic UI updates.
 <span>JavaScript</span>
 </div>
 
-<p class="hover-tip">Hover to view project preview →</p>
+<p class="hover-tip">
+<span class="desktop-tip">Hover to view project preview →</span>
+<span class="mobile-tip">Tap to view project preview →</span>
+</p>
 
 </div>
 
+</div>
 
 <!-- BACK -->
 
@@ -210,11 +292,11 @@ Built to practice JavaScript logic and dynamic UI updates.
 
 <div class="project-links">
 
-<a href="https://github.com/joanginika14-web/Bakery-Cupcake-Counter-Web-App">
+<a href="https://github.com/joanginika14-web/Bakery-Cupcake-Counter-Web-App" target="_blank">
 GitHub
 </a>
 
-<a href="https://bakery-cupcake-counter-web-app.netlify.app/">
+<a href="https://bakery-cupcake-counter-web-app.netlify.app/" target="_blank">
 Live Demo
 </a>
 
@@ -230,11 +312,12 @@ Live Demo
 
 </section>
 
-
+<!-- CERTIFICATIONS -->
 
 <section class="section" id="certifications">
 
 <h2>Courses & Certifications</h2>
+
 <br>
 
 <ul class="cert-list">
@@ -244,14 +327,15 @@ Live Demo
 <li>Scrimba – Learn JavaScript</li>
 <li>Alison – Introduction to Python</li>
 <li>UNSSC (United Nations System Staff College) – SDG Primer</li>
-<li>UNSSC (United Nations System Staff College)– Sustainable Lifestyles</li>
+<li>UNSSC (United Nations System Staff College) – Sustainable Lifestyles</li>
 <li>UNITAR (United Nations Institute for Training and Research) – Advancing Sustainable Development</li>
+<li>TechBridge Foundation – Canva, AI and Google Tools</li>
 
 </ul>
 
 </section>
 
-
+<!-- FOOTER -->
 
 <footer class="footer">
 
@@ -259,29 +343,9 @@ Live Demo
 
 </footer>
 
+<!-- JAVASCRIPT -->
 
+<script src="script.js"></script>
 
-<script>
-  // Scroll progress bar
-  window.onscroll = function() {
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolled = (winScroll / height) * 100;
-    document.getElementById("progress-bar").style.width = scrolled + "%";
-  };
-
-  // Mobile-friendly flip card functionality
-const flipCards = document.querySelectorAll('.flip-card');
-
-flipCards.forEach(card => {
-  card.addEventListener('click', (e) => {
-    // Only toggle if the click is NOT on a link inside the card
-    if(!e.target.closest('a')) {
-      const inner = card.querySelector('.flip-card-inner');
-      inner.classList.toggle('flipped');
-    }
-  });
-});
-</script>
 </body>
 </html>
